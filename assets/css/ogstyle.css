@@ -221,10 +221,13 @@ section {
     min-width: 700px;
     height: 300px;
     border-radius: 30px;
+    position: relative;
+    overflow: hidden; 
 }
 .hour-title {
     color: var(--title-color);
     padding: 10px 0px 0px 30px;
+    width: 100%;
 }
 .hours-container {
     display: flex;
@@ -232,6 +235,24 @@ section {
     justify-content: space-around;
     width: inherit;
     gap: 25px;
+}
+.prev,
+.next {
+    background-color: transparent;
+    border: 0;
+    font-size: 3rem;
+    color: var(--font-color);
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev {
+    left: -3px;
+}
+.next {
+    right: -3px;
 }
 .time-container {
     display: flex;
@@ -241,6 +262,7 @@ section {
     background-color: #E8F0F4;
     border-radius: 30px;
     padding: 10px;
+    transition: transform 0.5s ease-in-out; /* Adiciona transição suave */
 }
 .hours {
     color: var(--title-color);
