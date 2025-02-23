@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
+    </style>
+    <link rel="stylesheet" href="assets/css/ogstyle.css">
+    <title>Weatho</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 id="logo">Weatho</h1>
+            <input type="text" id="search-bar" placeholder="Enter your location">
+        </div>
+    </header>
+
+    <section>
+        <div class="main-info">
+            <div class="sun-container">
+                <img class="sun" src="assets/interface/sol-sunny day.png" alt="">
+                <h3 class="today"></h3>
+                <h2 class="place"></h2>
+                <h1 class="temperature"></h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="stats-container">
+            <div class="principal-stats">
+                <div class="critical-stats">
+                    <div class="stats">
+                        <h2 class="critical-title">Weather for Today</h2>
+                        <div class="previews">
+                            <img class="stat-logo" src="assets/interface/rain-drip.png" alt="">
+                            <h3 class="stat-name">Hum</h3>
+                            <h3 class="data" data-stat="humidity"></h3>
+                        </div>
+                        <div class="previews">
+                            <img class="stat-logo" src="assets/interface/wind.png" alt="">
+                            <h3 class="stat-name">Wind</h3>
+                            <h3 class="data" data-stat="wind"></h3>
+                        </div>
+                        <div class="previews">
+                            <img class="stat-logo" src="assets/interface/rain-chance.png" alt="">
+                            <h3 class="stat-name">R.Chance</h3>
+                            <h3 class="data" data-stat="rain-chance"></h3>
+                        </div>
+                        <div class="previews">
+                            <img class="stat-logo" src="assets/interface/prediction.png" alt="">
+                            <h3 class="stat-name">Precip</h3>
+                            <h3 class="data" data-stat="rain-qt"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="cover">
+                    <div class="aside-stats">
+                        <img class="aside-logo" src="assets/interface/cloud-icon.png" alt="">
+                        <h3 class="aside-name">Cloud cover</h3>
+                    </div>
+                    <h2 class="aside-data" data-stat="cloud-cover"></h2>
+                </div>
+                <div class="visibility">
+                    <div class="aside-stats">
+                        <img class="aside-logo" src="assets/interface/open-eye.png" alt="">
+                        <h3 class="aside-name">Visibility</h3>
+                    </div>
+                    <h2 class="aside-data" data-stat="visibility"></h2>
+                    <h4 class="adjective-state"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="hour-position">
+            <div class="hour-container">
+                <button class="prev">&#10094;</button>
+                <h2 class="hour-title">Hour by Hour</h2>
+                <div class="hours-container"></div>
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="forecast-position">
+            <div class="weekres-container">
+                <div class="forecast">
+                    <h2 class="forecast-title">Forecast</h2>
+                    <div class="forecast-item">
+                        <div class="today-day">
+                            <h3 class="week-day">Tomorrow</h3>
+                            <h6 class="number-day"></h6>
+                        </div>
+                        <h3 class="day-temperature">27º</h3>
+                        <img class="forecast-logo" src="assets/interface/sun-light.png" alt="">
+                    </div>
+                    <div class="forecast-item">
+                        <div class="today-day">
+                            <h3 class="week-day"></h3>
+                            <h6 class="number-day"></h6>
+                        </div>
+                        <h3 class="day-temperature">27º</h3>
+                        <img class="forecast-logo" src="assets/interface/sun-light.png" alt="">
+                    </div>
+                    <div class="forecast-item">
+                        <div class="today-day">
+                            <h3 class="week-day"></h3>
+                            <h6 class="number-day"></h6>
+                        </div>
+                        <h3 class="day-temperature">27º</h3>
+                        <img class="forecast-logo" src="assets/interface/sun-light.png" alt="">
+                    </div>
+                    <div class="forecast-item">
+                        <div class="today-day">
+                            <h3 class="week-day"></h3>
+                            <h6 class="number-day"></h6>
+                        </div>
+                        <h3 class="day-temperature">27º</h3>
+                        <img class="forecast-logo" src="assets/interface/sun-light.png" alt="">
+                    </div>
+                </div>
+                <div class="go">
+                    <h2 class="go-title">Go out</h2>
+                    <div class="info-container">
+                        <div class="info-item">
+                            <img class="go-logo" src="assets/interface/uv.png" alt="">
+                            <h3 class="go-stat-name" data-out="uv">Uv</h3>
+                            <h3 class="go-data"></h3>
+                        </div>
+                        <div class="info-item">
+                            <img class="go-logo" src="assets/interface/sun.png" alt="">
+                            <h3 class="go-stat-name" data-out="rad">Rad</h3>
+                            <h3 class="go-data"></h3>
+                        </div>
+                        <div class="info-item">
+                            <img class="go-logo" src="assets/interface/temperature.png" alt="">
+                            <h3 class="go-stat-name" data-out="max">Max</h3>
+                            <h3 class="go-data"></h3>
+                        </div>
+                        <div class="info-item">
+                            <img class="go-logo" src="assets/interface/temperature-blue.png" alt="">
+                            <h3 class="go-stat-name" data-out="min">Min</h3>
+                            <h3 class="go-data"></h3>
+                        </div>
+                        <div class="info-item">
+                            <img class="go-logo" src="assets/interface/rain-drip-icon.png" alt="">
+                            <h3 class="go-stat-name" data-out="rain">Rain</h3>
+                            <h3 class="go-data"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+
+</html>
