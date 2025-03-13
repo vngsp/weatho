@@ -132,13 +132,6 @@ const sunImgPath = 'assets/interface/sol-sunny day.png';
 const rainImgPath = 'assets/interface/rain.png';
 const heavyRaingImgPath = 'assets/interface/heavy-rain.png';
 const snowImg = 'assets/interface/snow-img.png';
-// background images path
-const raingImgBackground = 'assets/interface/lil-rain.png';
-const sunImgBackground = 'assets/interface/light-interface.png';
-const cloudImgBackground = 'assets/interface/cloud-img.png';
-const heavyRainImgBackground = 'assets/interface/lil-drip.png'
-const snowImgBackground = 'assets/interface/snow-bg.ong'
-// sun container img
 const sunContainerBackground = 'assets/interface/light-efect.png';
 
 // principal functions
