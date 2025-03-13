@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const today = document.querySelector('.today');
+const today = document.querySelector('.today');
 today.innerHTML = new Date().toLocaleDateString('eng', { weekday: 'long', day: 'numeric', month: 'long' });
 
 const firstLetterUpperCase = (string) => string.charAt(0).toUpperCase() + string.slice(1);
@@ -421,7 +421,7 @@ function generateCarouselItems(weatherData) {
             const hour = hourIndex % 12 || 12;
             const period = hourIndex < 12 ? 'am' : 'pm';
             const temperature = weatherData.hourly.temperature_2m[hourIndex];
-            const climateState = weatherData.hourly.cloud_cover[hourIndex] < 50 ? 'Cloudy' : 'Clear';
+            const climateState = weatherData.hourly.cloud_cover[hourIndex] < 45 ? 'Cloudy' : 'Clear';
             if(temperature > 18) {
                 timeContainer.innerHTML = `
                 <h3 class="hours">${hour}${period}</h3>
